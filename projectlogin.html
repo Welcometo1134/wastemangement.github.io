@@ -1,0 +1,141 @@
+<html>
+<head><title>W.M.C.</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script>
+	function myfunction(){
+		var x=document.getElementById("myinput");
+		var y=document.getElementById("hide1");
+		var z=document.getElementById("hide2");
+		
+		if(x.type === 'password')
+		{
+			x.type="text";
+			y.style.display="block";
+			z.style.display="none";
+		}
+		else
+		{
+			x.type="password";
+			y.style.display="none";
+			z.style.display="block";
+		}
+	}
+	</script>
+	<script>
+		function validation(){
+		var email=document.getElementById("email").value;
+		var password=document.getElementById("myinput").value;
+		if(email===''||email===null)
+		{
+			window.alert('fill all the details');
+		}
+		else if(password===''||password===null)
+			{
+				window.alert('fill  the details');
+			}
+	}
+	</script>
+	
+	
+	<style>
+*{
+		margin:0;
+		padding:0;
+}
+
+body{
+	background-image: url(lock.jpg);
+	background-size: cover;
+	background-position: center;
+	font-family: sans-serif;
+	
+}
+
+.logo img{
+	width:200px;
+	height:auto;
+	background-color: black;
+}
+.myform{
+	width: 500px;
+	background: rgba(0,0,0,0.8);
+	margin: 12% auto;
+	padding : 50px 0;
+	color: #fff;
+	box-shadow: 0 0 20px 2px rgba(0,0,0,0.5);
+}
+h2{
+	margin-bottom:30px;
+	}
+.input-box{
+	margin: 31px auto;
+	width: 80%;
+	border-bottom:1px solid #fff;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	font-color: white;
+}
+.input-box input{
+	width: 90%;
+	border: none;
+	outline: none;
+	background: transparent;
+	color; #fff;
+	font-color: white;
+}
+::placeholder{
+	color: #fff;
+}
+.fa{
+	margin-right: 10px;
+}
+.eye{
+	position: absolute;
+}
+#hide1{
+	display: none;
+}
+.loginid{
+	margin: 40px auto 20px;
+	width: 80%;
+	display: block;
+	outline: none;
+	padding: 10px 0;
+	border: 1px solid #fff;
+	cursor: pointer;
+	background: transparent;
+	color: #fff;
+	font-size: 16px;
+}
+.p{
+	text-align: center;
+	}
+</style>
+</head>
+
+<body>
+<div class="myform">
+<h2 align="center">Login</h2>
+<form action="loginserverfetch.py" method="post" onsubmit="return validation()">
+<div class="input-box">
+<i class="fa fa-envelope-o"></i>
+<input type="email" placeholder="Login id" name="email" id="email" style="color: white;">
+</div>
+<div class="input-box">
+<i class="fa fa-key" ></i>
+<input type="password" placeholder="password" name="password" id="myinput"  style="color: white;">
+	<span class="eye" onclick="myfunction()">
+		<i id="hide1" class="fa fa-eye" ></i>
+		<i id="hide2" class="fa fa-eye-slash"></i>
+	</span>
+</div>
+<button type="submit" class="loginid">LOGIN</button>
+
+
+</form>
+<a href="forget1.html"><button  class="loginid">Forgot Password</button></a>
+<span>Not Registered ?</span><a class="link" href="register1.html">Sign up</a> </p>
+</div>
+</body>
+</html>

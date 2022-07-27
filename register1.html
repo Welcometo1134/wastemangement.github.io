@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head><title>Sign in</title>
+ 
+
+
+<script>
+function validation()
+{
+		
+		var f=document.forms["myform"].value;
+		var n=document.forms["myform"]["name"].value;
+		
+		var ph=document.forms["myform"]["phone"].value;
+		var e=document.forms["myform"]["email"].value;
+
+		var s=document.forms["myform"]["state"].value;
+
+		var st=document.forms["myform"]["street"].value;
+		var pin=document.forms["myform"]["code"].value;
+		var p=document.forms["myform"]["password"].value;
+
+		var c=document.forms["myform"]["confirm"].value;
+		if((n==""||n==null )&&(ph==""||ph==null )&&( e==""||e==null )&&(s==""||s==null )&&(st==""||st==null )&&(pin==""||pin==null ))
+		{
+
+			window.alert("please fill the mandetory field");
+			return false;
+
+		}
+
+		if(n==""||n==null ){
+
+			window.alert("Enter your name");
+			return false;
+
+		}
+		if(ph==""||ph==null ){
+
+			window.alert("Enter your phone number");
+			return false;
+
+		}
+
+
+
+		if( e==""||e==null ){
+
+			window.alert("please enetr your email");
+			return false;
+		}
+		if(s==""||s==null ){
+
+			window.alert("Enter your phone number");
+			return false;
+
+		}
+		if(st==""||st==null ){
+
+			window.alert("Enter your Street number");
+			return false;
+
+		}
+		if(pin==""||pin==null ){
+
+			window.alert("Enter your pincode");
+			return false;
+
+		}
+		if(p==""||p==null ){
+
+			window.alert("please enter your Password");
+			return false;
+		}
+		if( c==""||c==null ){
+
+			window.alert("please confirm your Password");
+			return false;
+		}
+
+		if(p!=c ){
+
+			window.alert("confirm password is wrong");
+			return false;
+		}
+		else
+			window.alert("Submitted!!");
+			return true;
+
+	
+
+}
+
+</script> 
+<style>
+*{
+		margin:0;
+		padding:0;
+}
+body{
+	background-image:url(lock.jpg);
+	background-size: cover;
+	background-position: center;
+	font-family: sans-serif;
+	}
+h{
+	background-color:"black";
+	}
+.logo img{
+	width:200px;
+	height:auto;
+	background-color: black;
+}
+.myform{
+	width: 500px;
+	background: rgba(0,0,0,0.8);
+	margin: 12% auto;
+	padding : 50px 0;
+	color: #fff;
+	box-shadow: 0 0 20px 2px rgba(0,0,0,0.5);
+}
+.loginid{
+	margin: 40px auto 20px;
+	width: 80%;
+	display: block;
+	outline: none;
+	padding: 10px 0;
+	border: 1px solid #fff;
+	cursor: pointer;
+	background: transparent;
+	color: #fff;
+	font-size: 16px;
+}
+</style>
+
+</head>
+	<body>
+	
+		<div class="yup" align="center">
+		
+		<div class="myform">
+		<h2 align="center">Registration Form</h2>
+		<form action="registerserver.py" method="post" onsubmit="return validation();" >
+		<table >
+			
+			<tr><b><u><td><font size="4" font color="white">Name(*):</b></u></td>
+			    <td><input type="text" id="name" placeholder="Name" name="name"></td>
+			</tr>
+			<tr><b><u><td><font size="4" font color="white">Phone No.(*):</td>
+			    <td><input type="text" id="phone"  placeholder="9804******"  name="phone"></td>
+			</tr>
+			<tr><b><u><td><font size="4" font color="white">Email Id(*):</td>
+			    <td><input type="text" id="email"  placeholder="********@gmail.com" name="email"></td>
+			</tr>
+			<tr><b><u><td><font size="4" font color="white">Age:</td>
+			    <td><input type="text" id="age"  placeholder="age" name="age"></td>
+			</tr>
+			<tr><b><u><td><font size="4" font color="white"><label for="country">Country</label></td>
+			<td>
+			<select id="country" name="country">
+			<option value="India" >India</option>
+			</select></td></tr>	
+			</tr>
+			
+			<tr><b><u><td><font size="4" font color="white">State(*):</b></u></td>
+			    <td><input type="text" id="state"  placeholder="state" name="state"></td>
+			</tr>
+			
+			<tr><b><u><td><font size="4" font color="white">District/City:</b></u></td>
+			    <td><input type="text" id="city"  placeholder="district/city" name="city"></td>
+			</tr>
+			
+			<tr><b><u><td><font size="4" font color="white">Locality:</b></u></td>
+			    <td><input type="text" id="loc"  placeholder="locality" name="locality"></td>
+			</tr>
+
+			
+			<tr><b><u><td><font size="4" font color="white">Street Name(*):</b></u></td>
+			    <td><input type="text" id="street"  placeholder="street" name="street"></td>
+			</tr>
+
+			
+			<tr><b><u><td><font size="4" font color="white">Pin code(*):</b></u></td>
+			    <td><input type="text" id="code"  placeholder="code" name="pin"></td>
+			</tr>
+			
+			<tr><b><u><td><font size="4" font color="white">Post Office:</b></u></td>
+			    <td><input type="text" id="post"  placeholder="post" name="post"></td>
+
+			</tr>
+			
+			
+			<tr><b><u><td><font size="4" font color="white">Landmark:</b></u></td>
+			    <td><input type="text" id="mark"  placeholder="mark" name="landmark"></td>
+			</tr>
+						
+			<tr><b><u><td><font size="4" font color="white">Password(*):</b></u></td>
+			    <td><input type="password" id="passsword"  placeholder="password" name="password"></td>
+
+			</tr>
+						
+			
+			
+
+		</div></div><br></br><br></br><br></br>
+		</table>
+		<button type="submit" class="loginid" >SUBMIT </button>
+		</form>
+
+		
+	</body>
+</html>
+
